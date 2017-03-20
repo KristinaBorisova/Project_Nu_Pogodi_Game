@@ -91,11 +91,25 @@ public class MainUserScreen {
 		frame.getContentPane().add(btnPlayGame);
 
 		JButton btnLogIn = new JButton("Log in");
+		btnLogIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				UserLogInForm logIn = new UserLogInForm(); 
+				logIn.setVisible(true);
+			}
+		});
 		btnLogIn.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnLogIn.setBounds(253, 236, 128, 43);
 		frame.getContentPane().add(btnLogIn);
 
 		JButton btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				UserRegistrationForm register = new UserRegistrationForm();
+				register.setVisible(true);
+			}
+		});
 		btnRegister.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnRegister.setBounds(253, 292, 128, 40);
 		frame.getContentPane().add(btnRegister);

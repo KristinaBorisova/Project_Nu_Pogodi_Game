@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 import java.nio.channels.ShutdownChannelGroupException;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class RegistrationForm  {
 
@@ -118,5 +119,4 @@ public class RegistrationForm  {
 		lblPassword.setBounds(26, 104, 89, 21);
 		frame.getContentPane().add(lblPassword);
 	}
-
 }

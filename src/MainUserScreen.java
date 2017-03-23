@@ -15,7 +15,6 @@ public class MainUserScreen {
 	private JButton btnPlayGame;
 	private JButton btnLogIn;
 
-	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -29,55 +28,50 @@ public class MainUserScreen {
 		});
 	}
 
-	
 	public MainUserScreen() {
 		initializeElements();
-//		buttonsActinos();
-	}
-	
-
-	
-//		btnPlayGame.addActionListener(new ActionListener() { // PlayGame Button sends us to PlayGameClass
-//			public void actionPerformed(ActionEvent e) {
-//				
-//			}
-//		});
-//
-//		
-//		
-//		btnLogIn.addActionListener(new ActionListener() { //LogIn Button opens Login Form
-//			public void actionPerformed(ActionEvent e) {
-//			}
-//		});
-//		
-		
-	
-	
-
-	/*private void buttonsActinos() {
-		
-		btnRegister.addActionListener(new ActionListener() { //Register button opens RegistrationForm Class
-			public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null, "emiii");
-			}
-		});
-		
+		// buttonsActinos();
 	}
 
+	// btnPlayGame.addActionListener(new ActionListener() { // PlayGame Button
+	// sends us to PlayGameClass
+	// public void actionPerformed(ActionEvent e) {
+	//
+	// }
+	// });
+	//
+	//
+	//
+	// btnLogIn.addActionListener(new ActionListener() { //LogIn Button opens
+	// Login Form
+	// public void actionPerformed(ActionEvent e) {
+	// }
+	// });
+	//
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	*/
+	/*
+	 * private void buttonsActinos() {
+	 * 
+	 * btnRegister.addActionListener(new ActionListener() { //Register button
+	 * opens RegistrationForm Class public void actionPerformed(ActionEvent e) {
+	 * JOptionPane.showMessageDialog(null, "emiii"); } });
+	 * 
+	 * }
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	private void initializeElements() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
@@ -86,6 +80,13 @@ public class MainUserScreen {
 		frame.getContentPane().setLayout(null);
 
 		JButton btnPlayGame = new JButton("Play Game");
+		btnPlayGame.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				GameDemo game = new GameDemo();
+				game.setVisible(true);
+			}
+		});
 		btnPlayGame.setFont(new Font("Trajan Pro", Font.BOLD, 21));
 		btnPlayGame.setBounds(197, 163, 227, 60);
 		frame.getContentPane().add(btnPlayGame);
@@ -94,7 +95,7 @@ public class MainUserScreen {
 		btnLogIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				UserLogInForm logIn = new UserLogInForm(); 
+				UserLogInForm logIn = new UserLogInForm();
 				logIn.setVisible(true);
 			}
 		});

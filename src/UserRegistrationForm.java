@@ -62,8 +62,7 @@ public class UserRegistrationForm extends JFrame {
 	}
 
 	private void addUsernameToData(String usernameInput) {
-		try (FileWriter fw = new FileWriter("C:\\Users\\USER\\Desktop\\Project\\TryOutDatabase\\DataBaseUserName",
-				true); BufferedWriter bw = new BufferedWriter(fw); PrintWriter out = new PrintWriter(bw)) {
+		try (FileWriter fw = new FileWriter("C:\\Users\\USER\\Desktop\\Project\\TryOutDatabase\\DataBaseUserName",true); BufferedWriter bw = new BufferedWriter(fw); PrintWriter out = new PrintWriter(bw)) {
 			out.println(userPassword);
 		} catch (IOException e) {
 			System.out.println(e);
